@@ -1,0 +1,48 @@
+body {
+  text-align: center;
+  background-color: lightblue;
+}
+
+textarea {
+  float: left;
+  width: 48%;
+  min-height: 500px;
+  overflow: scroll;
+  display: inline-block;
+  background: #f4f4f9;
+  outline: none;
+  font-family: Courier, sans-serif;
+  font-size: 14px;
+  position: relative;
+  margin-top: 50px;
+}
+
+iframe {
+  left: 50%;
+  position: absolute;
+  width: 48%;
+  min-height: 500px;
+  overflow: scroll;
+  margin-top: 50px;
+  display: inline-block;
+}
+
+h1{
+  float: left;
+  position: fixed;
+  margin: 10px;
+}
+
+.options{
+  font-size: 20px;
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+#btn{
+  width: 100px;
+  font-size: 20px;
+  margin-left: 10px;
+  background-color: pink;
+}
