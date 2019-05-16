@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My online calculator</title>
+<style>
+body{
+	background-color: black;
+}
+table{
+padding-top: 15px;
+border:2px solid black;
+width:20%;
+background-color:black;
+}
+td{
+padding:10px;
+height:100%;
+color:white;
+}
+input{
+width:100%;
+height:100%;
+background-color:black;
+font-size: 50px;
+border: 0px;
+}
+button{
+width: 70px;
+height: 70px;
+font-size: 30px;
+column-fill: black;
+color: white;
+background-color: #292b2d;
+border-radius: 100%;
+border : 0px;
+border-color: #292b2d;
+}
+.op{
+	background-color: orange;
+}
+.grey{
+	color: black;
+	background-color: lightgrey;
+}
+.long{
+	width: 100%;
+	border-radius: 20px;
+}
+.long-grey{
+	width: 100%;
+	border-radius: 20px;
+	color: black;
+	background-color: lightgrey;
+}
+button:hover{
+color: black;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+	<script>
+	function number(value){
+		document.form1.result.value += value;
+	}
+	function cle(value){
+		document.form1.result.value = value;
+	}
+	function evalua(){
+		//var evalu = eval(document.form1.result.value);
+		document.form1.result.value = eval(document.form1.result.value);
+	}
+	</script>
+	<form name="form1">
+	<table align="center">
+		<tr><td colspan="4">
+		<input type = "text" name="result" placeholder="0" disabled style="text-align:right"></input>
+		</td></tr>
+		<tr>
+		<td colspan="2"><button class="long-grey" type = "button" onclick="cle(value)" value="">AC</button></td>
+		<td><button class="grey" type = "button" onclick="number(value)" value="%">%</button></td>
+		<td><button class="op" type = "button" onclick="number(value)" value="/">/</button></td>
+		</tr>
+		<tr>
+		<td><button type = "button" onclick="number(value)" value="1">1</button></td>
+		<td><button type = "button" onclick="number(value)" value="2">2</button></td>
+		<td><button type = "button" onclick="number(value)" value="3">3</button></td>
+		<td><button class="op" type = "button" onclick="number(value)" value="*">*</button></td>
+		</tr>
+		<tr>
+		<td><button type = "button" onclick="number(value)" value="4">4</button></td>
+		<td><button type = "button" onclick="number(value)" value="5">5</button></td>
+		<td><button type = "button" onclick="number(value)" value="6">6</button></td>
+		<td><button class="op" type = "button" onclick="number(value)" value="+">+</button></td>
+		</tr>
+		<tr>
+		<td><button type = "button" onclick="number(value)" value="7">7</button></td>
+		<td><button type = "button" onclick="number(value)" value="8">8</button></td>
+		<td><button type = "button" onclick="number(value)" value="9">9</button></td>
+		<td><button class="op" type = "button" onclick="number(value)" value="-">-</button></td>
+		</tr>
+		<tr>
+		<td colspan="2"><button class="long" type = "button" onclick="number(value)" value="0">0</button></td>
+		<td><button type = "button" onclick="number(value)" value="."><strong>.</strong></button></td>
+		<td><button class="op" type = "button" onclick="evalua()">=</button></td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>
